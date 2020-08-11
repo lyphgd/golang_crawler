@@ -1,0 +1,71 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Dup_test",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}/mycrawler/engine/concurret_test.go",
+            "args": [
+                "-test.run",
+                "MyTestFunction"
+            ]
+        },
+        
+
+        {
+            "name": "Save server",
+            "type": "go",
+            "request": "attach",
+            "mode": "remote",
+            "remotePath": "${workspaceRoot}/mycrawler_dis/persist/server/main.go",
+            "port": 1235,
+            "host": "127.0.0.1"
+        },
+        {
+            "name": "Front",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/mycrawler/frontend/start.go",
+            "env": {},
+            "args": [],
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "name": "Launch test function",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceRoot}/mycrawler/zhenai/parser/profile_test.go",
+            "args": [
+                "-test.run",
+                "MyTestFunction"
+            ]
+        },
+        {
+            "name": "mycrawler_single",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceRoot}/mycrawler/main.go",
+            "env": {},
+            "args": [],
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "name": "mycrawler_dis",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceRoot}/mycrawler_dis/main.go",
+            "env": {},
+            "args": [],
+            "cwd": "${workspaceRoot}"
+        },
+    ]
+}
